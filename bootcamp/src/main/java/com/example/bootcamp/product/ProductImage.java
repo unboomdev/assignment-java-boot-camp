@@ -10,6 +10,9 @@ public class ProductImage {
     private String url;
     private int productId;
 
+    public ProductImage() {
+    }
+
     public ProductImage(int id, String url, int productId) {
         this.id = id;
         this.url = url;

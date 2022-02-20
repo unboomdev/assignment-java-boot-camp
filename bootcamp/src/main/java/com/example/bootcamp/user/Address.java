@@ -16,6 +16,9 @@ public class Address {
     private Boolean isDefault;
     private int userId;
 
+    public Address() {
+    }
+
     public Address(int id, String email, String address, String zipcode, String district, String province, String mobileNumber, Boolean isDefault, int userId) {
         this.id = id;
         this.email = email;

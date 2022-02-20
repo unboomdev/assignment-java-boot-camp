@@ -9,6 +9,9 @@ public class Payment {
     private int id;
     private String description;
 
+    public Payment() {
+    }
+
     public Payment(int id, String description) {
         this.id = id;
         this.description = description;

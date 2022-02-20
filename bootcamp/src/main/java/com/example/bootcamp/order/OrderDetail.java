@@ -2,20 +2,32 @@ package com.example.bootcamp.order;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class OrderDetail {
     @Id
     private int id;
-    private int orderId;
-    private int productId;
-    private int quantity;
+    private int userId;
+    private int paymentId;
+    private int invoiceNumber;
+    private Date orderDate;
+    private Date paymentDate;
+    private Date paymentExpireDate;
+    private boolean paid;
 
-    public OrderDetail(int id, int orderId, int productId, int quantity) {
+    public OrderDetail() {
+    }
+
+    public OrderDetail(int id, int userId, int paymentId, int invoiceNumber, Date orderDate, Date paymentDate, Date paymentExpireDate, boolean paid) {
         this.id = id;
-        this.orderId = orderId;
-        this.productId = productId;
-        this.quantity = quantity;
+        this.userId = userId;
+        this.paymentId = paymentId;
+        this.invoiceNumber = invoiceNumber;
+        this.orderDate = orderDate;
+        this.paymentDate = paymentDate;
+        this.paymentExpireDate = paymentExpireDate;
+        this.paid = paid;
     }
 
     public int getId() {
@@ -26,27 +38,59 @@ public class OrderDetail {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getProductId() {
-        return productId;
+    public int getPaymentId() {
+        return paymentId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getInvoiceNumber() {
+        return invoiceNumber;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public Date getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public Date getPaymentExpireDate() {
+        return paymentExpireDate;
+    }
+
+    public void setPaymentExpireDate(Date paymentExpireDate) {
+        this.paymentExpireDate = paymentExpireDate;
+    }
+
+    public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
     }
 }
