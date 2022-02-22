@@ -1,4 +1,4 @@
-package com.example.bootcamp.product;
+package com.example.bootcamp.product.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
