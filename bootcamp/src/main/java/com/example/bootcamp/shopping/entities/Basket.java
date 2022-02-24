@@ -12,14 +12,16 @@ public class Basket {
     private int id;
     private int userId;
     private int productId;
+    private int productPrice;
     private int quantity;
 
     public Basket() {
     }
 
-    public Basket(int userId, int productId, int quantity) {
+    public Basket(int userId, int productId, int productPrice, int quantity) {
         this.userId = userId;
         this.productId = productId;
+        this.productPrice = productPrice;
         this.quantity = quantity;
     }
 
@@ -45,6 +47,14 @@ public class Basket {
 
     public void setProductId(int productId) {
         this.productId = productId;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
     public int getQuantity() {
