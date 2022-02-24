@@ -12,14 +12,15 @@ public class OrderItem {
     private int id;
     private int orderId;
     private int productId;
+    private int productPrice;
     private int quantity;
 
     public OrderItem() {
     }
 
-    public OrderItem(int orderId, int productId, int quantity) {
-        this.orderId = orderId;
+    public OrderItem(int productId, int productPrice, int quantity) {
         this.productId = productId;
+        this.productPrice = productPrice;
         this.quantity = quantity;
     }
 
@@ -45,6 +46,14 @@ public class OrderItem {
 
     public void setProductId(int productId) {
         this.productId = productId;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
     public int getQuantity() {

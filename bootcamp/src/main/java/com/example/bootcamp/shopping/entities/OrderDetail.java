@@ -14,21 +14,12 @@ public class OrderDetail {
     private int userId;
     private int paymentId;
     private int invoiceNumber;
+    private int totalPrice;
     private Date orderDate;
     private Date paidDate;
     private Date paymentExpireDate;
 
     public OrderDetail() {
-    }
-
-    public OrderDetail(int id, int userId, int paymentId, int invoiceNumber, Date orderDate, Date paidDate, Date paymentExpireDate) {
-        this.id = id;
-        this.userId = userId;
-        this.paymentId = paymentId;
-        this.invoiceNumber = invoiceNumber;
-        this.orderDate = orderDate;
-        this.paidDate = paidDate;
-        this.paymentExpireDate = paymentExpireDate;
     }
 
     public int getId() {
@@ -61,6 +52,14 @@ public class OrderDetail {
 
     public void setInvoiceNumber(int invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public Date getOrderDate() {

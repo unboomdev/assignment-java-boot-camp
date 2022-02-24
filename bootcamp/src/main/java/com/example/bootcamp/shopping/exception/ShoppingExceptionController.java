@@ -28,4 +28,17 @@ public class ShoppingExceptionController {
         return new ExceptionResponse(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.name(), e.getMessage(), System.currentTimeMillis());
     }
 
+    @ExceptionHandler(ProductsItemEmptyException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ExceptionResponse itemsEmpty(ProductsItemEmptyException e) {
+        return new ExceptionResponse(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.name(), e.getMessage(), System.currentTimeMillis());
+    }
+
+    @ExceptionHandler(DataNotFoundException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ExceptionResponse dataNotFound(DataNotFoundException e) {
+        return new ExceptionResponse(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND.name(), e.getMessage(), System.currentTimeMillis());
+    }
 }
