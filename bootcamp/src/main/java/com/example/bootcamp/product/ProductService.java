@@ -33,7 +33,7 @@ public class ProductService {
 
     public ProductSearchResponse searchProduct(String query) {
         List<Product> results = productRepository.findByNameContainingIgnoreCase(query);
-        if (results.size() > 0) {
+        if (!results.isEmpty()) {
             List<ProductsItem> products = new ArrayList<>();
             for (Product product: results) {
                 Optional<ProductImage> imageResult = productImageRepository.findFirstByProductId(product.getId());

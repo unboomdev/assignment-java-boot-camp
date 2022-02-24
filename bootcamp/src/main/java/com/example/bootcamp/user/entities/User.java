@@ -1,4 +1,4 @@
-package com.example.bootcamp.user;
+package com.example.bootcamp.user.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

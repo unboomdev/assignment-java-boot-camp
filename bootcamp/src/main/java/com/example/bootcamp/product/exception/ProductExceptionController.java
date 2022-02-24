@@ -1,4 +1,4 @@
-package com.example.bootcamp.product;
+package com.example.bootcamp.product.exception;
 
 import com.example.bootcamp.common.ExceptionResponse;
 import com.example.bootcamp.product.exception.ProductNotFoundException;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class ProductControllerAdvice {
+public class ProductExceptionController {
 
     @ExceptionHandler(ProductNotFoundException.class)
     @ResponseBody

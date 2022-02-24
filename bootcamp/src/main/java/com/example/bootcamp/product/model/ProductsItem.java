@@ -1,6 +1,6 @@
 package com.example.bootcamp.product.model;
 
-public class ProductsItem{
+public class ProductsItem {
 	private int id;
 	private String name;
 	private int price;

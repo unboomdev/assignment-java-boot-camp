@@ -1,22 +1,24 @@
-package com.example.bootcamp.order;
+package com.example.bootcamp.shopping.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class OrderItem {
+public class Basket {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int orderId;
+    private int userId;
     private int productId;
     private int quantity;
 
-    public OrderItem() {
+    public Basket() {
     }
 
-    public OrderItem(int id, int orderId, int productId, int quantity) {
-        this.id = id;
-        this.orderId = orderId;
+    public Basket(int userId, int productId, int quantity) {
+        this.userId = userId;
         this.productId = productId;
         this.quantity = quantity;
     }
@@ -29,12 +31,12 @@ public class OrderItem {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getProductId() {
