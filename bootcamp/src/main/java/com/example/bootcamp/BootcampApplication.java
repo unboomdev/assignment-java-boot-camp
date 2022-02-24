@@ -52,6 +52,7 @@ public class BootcampApplication {
 		productImageRepository.save(new ProductImage(1, "http://image.com/1", 10001));
 		productImageRepository.save(new ProductImage(2, "http://image.com/2", 10002));
 		productImageRepository.save(new ProductImage(3, "http://image.com/3", 10002));
+		productImageRepository.save(new ProductImage(4, "http://image.com/4", 10003));
 
 		Payment payment1 = new Payment(30001, "บัตรเครดิตหรือเดบิต");
 		Payment payment2 = new Payment(30002, "ชำระเงินปลายทาง");

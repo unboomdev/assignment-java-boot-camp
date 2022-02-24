@@ -151,7 +151,6 @@ public class ShoppingService {
         for (OrderItem orderItem : orderItems) {
             orderItem.setOrderId(order.getId());
         }
-        System.out.println(orderItems.get(0).getId());
         orderItemRepository.saveAll(orderItems);
         basketRepository.deleteAll(baskets);
         return new CheckoutResponse(order.getId(), "Update success");
